@@ -55,31 +55,15 @@ hr {
     margin-left: 145px;
 }
 
-.ts9case {
-    background-color: #53AC53;
+.kloncase {
+    background-color: #c97f04;
 }
 
-.ts9plate {
-    background-image: linear-gradient(to left, #BBC2CC, #e1eaf2);
-    border-color: #010104;
-    border-width: 3px;
+.klonplate {
+    background-color: #71797E;
 }
 
-.ts10case {
-    background-color: #7bc869;
+.klontext {
+    font-family: 'Times New Roman', Times, serif;
+    color: #401f16
 }
-
-.ts10plate {
-    background-image: linear-gradient(to right, #41433c, #2c2c2c);
-    border-color: #010104;
-    border-width: 3px;
-}
-
-.bg-ts {
-    background-image: linear-gradient(to right, #53AC53, #198754);
-}
-
-.bg-ts10 {
-    background-image: linear-gradient(to right, #53AC53, #7bc869);
-}
-
