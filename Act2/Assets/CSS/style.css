@@ -57,6 +57,32 @@ hr {
 
 .kloncase {
     background-color: #c97f04;
+    color: #401f16;
+}
+
+.klongold {
+    background-color: #c97f04;
+    color: #401f16;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.klonsilver {
+    background-color: #C0C0C0;
+    color: black;
+    border-color: black;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.klonblack {
+    background-color: #0a0a09;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.klonktr {
+    background-color: #A61018;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .klonplate {
@@ -65,5 +91,8 @@ hr {
 
 .klontext {
     font-family: 'Times New Roman', Times, serif;
-    color: #401f16
+}
+
+.stomp {
+    background-image: linear-gradient(to left, #A9A9A9, #D3D3D3);
 }

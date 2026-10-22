@@ -60,16 +60,54 @@
                     <div class="card-body border border-black border-2 rounded klontext">
                         <h4>The Centaur</h4>
                         <hr>
-                        <p class="mt-2">The legendary botique overdrive pedal</p>
+                        <p class="mt-2">The legendary botique overdrive pedal, the Klon Centaur is known for its
+                            transparent overdrive and is one of the rarest and most expensive overdrive pedals of all
+                            time. Prominent users include John Mayer, Jeff Beck and Joe Perry from Aerosmith. The Klon
+                            Centaur is often used as a thickening agent for your tone, paired with other overdrives for
+                            solos.</p>
                     </div>
                 </div>
             </div>
             <div class="col-8">
-                <div class="card kloncase">
-                    <div class="card-body">
-                        Hello
+                <div class="card kloncase shad p-1">
+                    <div class="card-body border border-black border-2 rounded klontext">
+                        <h4>History</h4>
+                        <hr>
+                        <p class="mt-2">The Klon Centaur was originally made by Bill Finnegan, who complained how the
+                            harmonic richness of his amps were lost when turning down the volume in gigs. In response,
+                            he, along with MIT engineers, decided to create an overdrive pedal that will preserve the
+                            harmonic richness of your amps even in lower volumes. He debuted this pedal in 1994 as the
+                            <b>Klon Centaur</b> where every unit was hand-built and tested by Finnegan himself. But due
+                            to low units sold and an extremely long wait time among orders, Finnegan decided to
+                            discontinue the Centaur in 2008 after producing 8,000 units throughout the years. In 2014
+                            however, he brought back the Klon Centaur as the <b>Klon KTR</b>, a mass-produced version of
+                            the Centaur which is still available to this day.
+                        </p>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <h1 class="zen textshad text-center">Klon Centaur Variants</h1>
+
+            <div id="carousel" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner" id="carous">
+                    <!-- JSON -->
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
             </div>
         </div>
     </div>
@@ -77,6 +115,67 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+    <script>
+        var klon = [
+            {
+                name: "Gold Klon Centaurs",
+                carnum: "carousel-item active",
+                css: " active klongold",
+                desc: "The original Centaurs designed in 1994. These centaurs are known for their gold finishes and the signature transparent overdrive.",
+                keychar: "Softer Treble, High Headroom, and a More Compressed Feel",
+                link: "https://reverb.com/p/klon-centaur-horsie"
+            },
+            {
+                name: "Silver Klon Centaurs",
+                carnum: "carousel-item",
+                css: "klonsilver",
+                desc: "The same Centaur circuit but housed in a silver casing, this centaur was noted by several users to have a slightly higher midrange that the gold variant.",
+                keychar: "Higher Treble, Brighter Sound, More Transparent Drive",
+                link: "https://reverb.com/p/klon-centaur-non-horsie"
+            },
+            {
+                name: "John Mayer's Black Centaur",
+                carnum: "carousel-item",
+                css: "klonblack",
+                desc: "John Mayer, a prominent user of the Klon Centaur, uses a 'blacked-out' Centaur. This pedal is notable for its sound when tone-stacking with the TS9.",
+                keychar: "Compressed Tone, Subtle Mid-Hump, Transparent Boost",
+                link: "https://www.youtube.com/watch?v=Lw7GLzpmf8I"
+            },
+            {
+                name: "Klon KTR",
+                carnum: "carousel-item",
+                css: "klonktr",
+                desc: "The next generation Centaurs, the Klon KTR was designed by Bill Finnegan to be the mass-produced successor of the Klon Centaurs, featuring a switchable bypass for clean tones.",
+                keychar: "Brighter in the Upper Mids, Switchable Bypass Option",
+                link: "https://reverb.com/p/klon-centaur-horsie"
+            }
+        ];
+
+        var elcarousel = document.getElementById("carous");
+
+        for (var i = 0; i < klon.length; i++) {
+            elcarousel.innerHTML +=
+                `<div class="`+ klon[i].carnum +`">
+                    <div class="col-8 mx-auto p-3">
+                        <div class="card `+ klon[i].css +` shad p-2">
+                            <div class="card-body border border-black border-2 rounded">
+                                <h4><b>`+ klon[i].name +`</b></h4><hr>
+                                <p class="mt-2">`+ klon[i].desc +`</p>
+                                <h5><b>KEY CHARACTERISTICS</b></h5>
+                                <div class="col-12 d-flex justify-content-between align-items-center mt-1">
+                                    <p class="klontext">`+ klon[i].keychar +`</p>
+                                    <div class="p stomp rounded-5 border border-4 border-black">
+                                        <a class="btn klontext text-black"
+                                        href="`+ klon[i].link +`" type="button">STOMP</a>
+                                    </div>
+                                 </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>`;
+            }
+    </script>
 </body>
 
 </html>
