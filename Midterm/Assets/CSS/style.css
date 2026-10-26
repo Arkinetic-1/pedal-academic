@@ -1,0 +1,85 @@
+/*Colors*/
+body {
+    background-color: rgb(39, 38, 43);
+    color: white;
+}
+
+.bg-head {
+    background-image: linear-gradient(to right, #010104, #040b4d);
+}
+
+.bg-main {
+    background-image: linear-gradient(to bottom, #565360, #797589);
+}
+
+.bg-carousel {
+    background-image: linear-gradient(to top, #43404a, #9f9ab5);
+}
+
+/*Text*/
+.orb {
+    font-family: "orbitron", sans-serif;
+}
+
+.aud {
+    font-family: "audiowide", sans-serif;
+}
+
+.zen {
+    font-family: "zen dots", sans-serif;
+    color: white;
+}
+
+.ast {
+    font-family: "asset", serif;
+    color: white;
+}
+
+
+
+/*Utilities*/
+hr {
+    margin-top: 1px;
+    margin-bottom: 2px;
+}
+
+.shad {
+    box-shadow: 4px 4px black
+}
+
+.textshad {
+    text-shadow: 2px 2px black;
+}
+
+.links {
+    margin-left: 145px;
+}
+
+.ts9case {
+    background-color: #53AC53;
+}
+
+.ts9plate {
+    background-image: linear-gradient(to left, #BBC2CC, #e1eaf2);
+    border-color: #010104;
+    border-width: 3px;
+}
+
+.ts10case {
+    background-color: #7bc869;
+}
+
+.ts10plate {
+    background-image: linear-gradient(to right, #41433c, #2c2c2c);
+    border-color: #010104;
+    border-width: 3px;
+}
+
+.bg-ts {
+    background-image: linear-gradient(to right, #53AC53, #198754);
+}
+
+.bg-ts10 {
+    background-image: linear-gradient(to right, #53AC53, #7bc869);
+}
+
