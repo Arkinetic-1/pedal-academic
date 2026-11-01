@@ -53,10 +53,25 @@
 
 
     <!--Body-->
-    <div class="container-fluid mt-4 p-1">
-        <h1 class="text-center textshad zen mt-3">The Catalogue</h1>
-        <div class="row">
+    <div class="container-fluid mt-4 p-3">
+        <h1 class="text-center textshad zen mt-1">The U.C. Database</h1>
+        <div class="row p-1">
+
             <div class="col-5 rounded shadow bg-secondary">Hello World</div>
+            <div class="col-7">
+                <div class="row p-1 g-2">
+                    <div class="col-12 rounded shadow bg-secondary">
+                        lorem
+                    </div>
+                    <div class="col-12 p-1">
+                        <div class="card bg-dark">
+                            <div class="card-body bg-secondary rounded shadow">
+                                <div class="h3 p-1" id="name"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </div>
@@ -64,6 +79,15 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+    <script>
+        var elName = document.getElementById("name");
+
+        const getGundam = async () => {
+            elName.innerHTML = "";
+            const response = await fetch('https://gundam-api.pages.dev/')
+        }
+
+    </script>
 </body>
 
 </html>
