@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>U.C.D.</title>
+    <title>M.S.G.</title>
     <link rel="icon" type="image/x-icon" href="Assets/img/logo.svg">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -54,11 +54,22 @@
 
     <!--Body-->
     <div class="container-fluid mt-4 p-3">
-        <h1 class="text-center textshad zen mt-1">The U.C. Database</h1>
+        <h1 class="text-center textshad zen mt-1">The M.S.G. Database</h1>
         <div class="row p-1">
 
-            <div class="col-5 rounded shadow bg-secondary">Hello World</div>
-            <div class="col-7">
+            <div class="col-12 col-lg-4 rounded shad bg-secondary p-2">
+                <h1 class="aud textshad">Mobile Suit Gundam</h1>
+                <hr>
+                <p class="orb pe-2"><strong>Mobile Suit Gundam</strong> is a Japanese anime series featuring giant robots
+                    called mobile suits,
+                    fighting wars and battles in space. The series has spawned multiple sequels and adaptations,
+                    featuring multiple gundams, storylines, and alternate universes. Mobile Suit Gundam is most well
+                    known for their model kits, called <strong>Gunpla</strong>, the buildable model kits of the mobile
+                    suits in the series. This site features the several gundams from the franchise, spanning from the
+                    original Mobile Suit Gundam all the way to The Witch From Mercury</p>
+            </div>
+
+            <div class="col-8">
                 <div class="row p-1 g-2">
                     <div class="col-12 rounded shadow bg-secondary">
                         lorem
@@ -80,13 +91,7 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
     <script>
-        var elName = document.getElementById("name");
-
-        const getGundam = async () => {
-            elName.innerHTML = "";
-            const response = await fetch('https://gundam-api.pages.dev/')
-        }
-
+        // const response = await fetch('https://gundam-api.pages.dev/')
     </script>
 </body>
 
