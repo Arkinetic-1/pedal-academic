@@ -59,7 +59,7 @@
             <div class="col-12 d-flex justify-content-between align-items-center">
                 <div class="bg-head border border-2 border-light rounded-4 p-3">
                     <a class="p text-light zen mt-2" id="backlink"
-                        href="page.html">Return to List</a>
+                        href="view.html">Return to List</a>
                 </div>
             </div>
 
@@ -121,27 +121,27 @@
             elBacklink.href = "index.html?page=" + page;
         }
 
-        const fetchGhibli = async () => {
-            elName.innerHTML = "Loading" + id;
-            elPoster.src = '';
-            elBanner.src = '';
+        // const fetchGhibli = async () => {
+        //     elName.innerHTML = "Loading" + id;
+        //     elPoster.src = '';
+        //     elBanner.src = '';
 
-            const response = await fetch(" https://ghibliapi.vercel.app/films");
-            const ghibli = await response.json();
+        //     const response = await fetch(" https://ghibliapi.vercel.app/films");
+        //     const ghibli = await response.json();
 
-            elName.innerHTML = ghibli.name;
-            elDescription.innerHTML = ghibli.description;
-            elPoster.innerHTML = ghibli.image;
-            elBanner.innerHTML = ghibli.banner;
-            elDirector.innerHTML = "<b>Directed By:</b>" + '' + ghibli.director;
-            elProducer.innerHTML = "<b>Produced By:</b>" + '' + ghibli.producer;
-            elRelease.innerHTML = "<b>Release Year:</b>" + '' + ghibli.release_date;
-            elRuntime.innerHTML = "<b>Runtime:</b>" + '' + ghibli.running_time + "minutes";
-        };
+        //     elName.innerHTML = ghibli.name;
+        //     elDescription.innerHTML = ghibli.description;
+        //     elPoster.innerHTML = ghibli.image;
+        //     elBanner.innerHTML = ghibli.banner;
+        //     elDirector.innerHTML = "<b>Directed By:</b>" + '' + ghibli.director;
+        //     elProducer.innerHTML = "<b>Produced By:</b>" + '' + ghibli.producer;
+        //     elRelease.innerHTML = "<b>Release Year:</b>" + '' + ghibli.release_date;
+        //     elRuntime.innerHTML = "<b>Runtime:</b>" + '' + ghibli.running_time + "minutes";
+        // };
 
-        if (id != null) {
-            fetchGhibli();
-        }
+        // if (id != null) {
+        //     fetchGhibli();
+        // }
     </script>
 </body>
 
