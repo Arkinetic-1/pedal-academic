@@ -121,9 +121,12 @@
                 
 
                 elParent.innerHTML += `
-                <div class="row rounded-4 p-3" href="https://arkinetic-1.github.io/pedal-academic/Midterm/page.html">
+                <div class="row rounded-4 p-3">
                     <div class="col-2 d-flex justify-content-center align-items-center">
-                        <img src="`+ image + `" class="img-fluid" style="max-width: 90%; max-height: auto;">
+                        <a href="page.html?id=`+id+`&page=`+page+`">
+                            <img src="`+ image + `" class="img-fluid" style="max-width: 90%; max-height: auto;">
+                        </a>
+                        
                     </div>
 
                     <div class="col-8 ms-3">
