@@ -43,6 +43,10 @@ hr {
     margin-bottom: 2px;
 }
 
+.hide {
+    display: none;
+}
+
 .shad {
     box-shadow: 4px 4px black
 }

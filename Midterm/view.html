@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GUNDAMS</title>
+    <title>Ghibli Studios</title>
     <link rel="icon" type="image/x-icon" href="Assets/img/logo.svg">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -54,29 +54,41 @@
 
     <!--Body-->
     <div class="container-fluid mt-4 p-3">
-        <h1 class="text-center textshad zen mt-1">The M.S.G. Database</h1>
+        <h1 class="text-center textshad zen mt-1">The Ghibli Catalouge</h1>
+        <div class="col-12 rounded p-2">
+            <p class="aud text-center"><strong>Studio Ghibli</strong> is an iconic Japanese Animation Studio founded by
+                Hayao Miyazaki, Isao Takahata, and Toshio Suzuki back in 1985. Ghibli is well-renowned for its anime
+                movies, such as My Neigbour Totoro, Spirited Away, and Princess Mononoke. The studio is also known for
+                its iconic attention to detail and world class hand-drawn animation. This website serves as a list of
+                Ghibli Movies to watch, and enjoy.</p>
+        </div>
         <div class="row p-1">
 
             <div class="col-12 d-flex justify-content-between align-items-center">
-               <div class="d-flex flex-row"> <!--  onclick="fetchGhibli()" -->
-                    <input type="text" class="form-control rounded-start-pill" placeholder="Enter Ghibli Movie Title" id="GhiblisearchInput">
-                    <div class="btn rounded-end-pill text-white aud btn-primary">Search</div>
+                <div class="d-flex flex-row"> <!--  onkeyup="fetchGhibli()"> -->
+                    <!-- <input type="text" class="form-control rounded-start-pill" placeholder="Enter Ghibli Movie Title"
+                        id="GhiblisearchInput">
+                    <div class="btn rounded-end-pill text-white zen btn-primary" onclick="fetchGhibli()">Search</div> -->
+                    <h1 class="zen textshad">Films</h1>
                 </div>
 
                 <div class="p-1">
                     <ul class="pagination">
-                        <li class="page-item aud"><a class="page-link btn" onclick="prev()">Previous</a></li>
-                        <li class="page-item aud"><a class="page-link btn" id="currentpage">1</a></li>
-                        <li class="page-item aud"><a class="page-link btn" onclick="next()">Next</a></li>
+                        <li class="page-item zen"><a class="page-link btn bg-head border border-2 border-light rounded-4 p-3 text-light" onclick="prev()">Previous</a></li>
+                        <li class="page-item zen"><a class="page-link bg-head border border-2 border-light rounded-4 p-3 text-light" id="currentpage">1</a></li>
+                        <li class="page-item zen"><a class="page-link btn bg-head border border-2 border-light rounded-4 p-3 text-light" onclick="next()">Next</a></li>
                     </ul>
                 </div>
             </div>
 
-            <div class="col-12 mt-3 gy-2" id="parent">
+
+            <div class="col-12 mt-1" id="parent">
 
             </div>
 
+
         </div>
+
 
     </div>
 
@@ -89,7 +101,9 @@
         //Init Elements
         var elCurrentPage = document.getElementById("currentpage");
         var elParent = document.getElementById("parent");
-        var elSearch = document.getElementById("GhiblisearchInput")
+        var elName = document.getElementById("name")
+
+        var searchIn = document.getElementById("GhiblisearchInput");
 
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
@@ -110,6 +124,7 @@
             elParent.innerHTML = '';
             elCurrentPage.innerHTML = page;
 
+
             const response = await fetch(" https://ghibliapi.vercel.app/films");
             const ghibli = await response.json();
             for (var i = ((page - 1) * perPage) + 0; i <= page * perPage; i++) {
@@ -118,21 +133,23 @@
                 var name = ghibli[i].title;
                 var details = ghibli[i].description;
                 var image = ghibli[i].image;
-                
+                var year = ghibli[i].release_date
+
 
                 elParent.innerHTML += `
-                <div class="row rounded-4 p-3">
+                <div class="row rounded-4 p-3 shadow mb-2">
                     <div class="col-2 d-flex justify-content-center align-items-center">
-                        <a href="page.html?id=`+id+`&page=`+page+`">
-                            <img src="`+ image + `" class="img-fluid" style="max-width: 90%; max-height: auto;">
+                        <a href="page.html?id=`+ id + `&page=` + page + `">
+                            <img src="`+ image + `" class="img-fluid rounded border border-4" style="max-width: 90 %; max-height: auto;">
                         </a>
                         
                     </div>
 
                     <div class="col-8 ms-3">
-                        <h1 class="klontext text-white textshad">`+ name + `</h1>
+                        <h1 class="zen text-white textshad">`+ name + `</h1>
                         <hr>
-                        <p class="klontext text-white">`+ details + `</p>
+                        <p class="aud text-white">`+ details + `</p><br><br>
+                        <h2 class="zen mt-4 textshad">Released in: `+ year + `<h2>
                     </div>
                 </div>
                 `
@@ -155,7 +172,10 @@
             }
             fetchGhibli();
         }
+
+
         fetchGhibli();
+
     </script>
 </body>
 
